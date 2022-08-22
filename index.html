@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--=============== LINE ICONS ===============-->
-    <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
+    <!-- <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css"> -->
+
+    <!--=============== BOX ICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
 
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
+    <!--=============== Favicon ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -53,10 +59,10 @@
             <!-- nav btn -->
             <div class="nav__btns">
                 <!-- theme change btn -->
-                <i class="lni lni-pallet change__theme" id="theme-button"></i>
+                <i class='bx bxs-palette change__theme' id="theme-button"></i>
                 <!-- toggle btn -->
                 <div class="nav__toggle" id="nav__toggle">
-                    <i class="lni lni-grid-alt"></i>
+                    <i class='bx bxs-grid-alt'></i>
                 </div>
             </div>
         </nav>
@@ -65,8 +71,137 @@
     <!--=============== MAIN ===============-->
     <main class="main-content">
         <!--=============== HOME ===============-->
-
+        <section class="home" id="home">
+            <div class="container">
+                <!-- intro -->
+                <div class="home__intro">
+                    <!-- avatar image -->
+                    <img src="assets/img/perfil.png" alt="Danilo">
+                    <!-- info -->
+                    <h1>Danilo Aguiar</h1>
+                    <span>I'm <span class="home__info-text">UI/UX Designer & Frontend Developer</span></span>
+                    <!-- social icons -->
+                    <ul class="home__social-icons">
+                        <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-github'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-behance'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-dribbble'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-whatsapp'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-telegram'></i></a></li>
+                    </ul>
+                    <!-- button -->
+                    <div>
+                        <a href="#" class="btn btn__default">Hire me</a>
+                    </div>
+                    <!-- scroll down mouse wheel -->
+                    <div class="scroll__down">
+                        <a href="#" class="mouse__wrapper">
+                            <span>Scroll Down</span>
+                            <span class="mouse">
+                                <span class="wheel"></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--=============== About ===============-->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title padd-15">About Me</h2>
+                <div class="row">
+                    <div class="about__img padd-15">
+                        <!-- avatar img -->
+                        <img src="assets/img/about.png" alt="">
+                    </div>
+                    <div class="about__content padd-15">
+                        <div class="rounded">
+                            <div class="row">
+                                <div class="about__text padd-15">
+                                    <!-- about text -->
+                                    <p>I'm Danilo Aguiar, Web developer, with extensive knowledge and years of
+                                        experience, working in web
+                                        technologies and UI/UX design, delivering quality work.</p>
+                                    <div>
+                                        <a download="" href="assets/pdf/cv_danilo-aguiar.pdf"
+                                            class="btn btn__default">Download CV</a>
+                                    </div>
+                                </div>
+                                <div class="skills padd-15">
+                                    <div class="row">
+                                        <!-- skill item -->
+                                        <div class="skill__item">
+                                            <h4>Frontend</h4>
+                                            <div class="progress">
+                                                <div class="progress__in"
+                                                    style="width: 90%; background: rgb(255, 209, 92);"></div>
+                                                <div class="skill__percent">90%</div>
+                                            </div>
+                                        </div>
+                                        <!-- skill item -->
+                                        <div class="skill__item">
+                                            <h4>UI/UX Design</h4>
+                                            <div class="progress">
+                                                <div class="progress__in"
+                                                    style="width: 75%; background: rgb(255, 76, 96);"></div>
+                                                <div class="skill__percent">75%</div>
+                                            </div>
+                                        </div>
+                                        <!-- skill item -->
+                                        <div class="skill__item">
+                                            <h4>Backend</h4>
+                                            <div class="progress">
+                                                <div class="progress__in"
+                                                    style="width: 85%; background: rgb(108, 108, 229);"></div>
+                                                <div class="skill__percent">85%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- fact item -->
+                    <div class="fact__item padd-15">
+                        <i class="bx bx-award fact__item-icon"></i>
+                        <div class="details">
+                            <h3>Experience</h3>
+                            <p>4 Years Working</p>
+                        </div>
+                    </div>
+                    <!-- fact item -->
+                    <div class="fact__item padd-15">
+                        <i class="bx bx-briefcase-alt fact__item-icon"></i>
+                        <div class="details">
+                            <h3>Completed</h3>
+                            <p>30+ Projects</p>
+                        </div>
+                    </div>
+
+                    <!-- fact item -->
+                    <div class="fact__item padd-15">
+                        <i class="bx bx-support fact__item-icon"></i>
+                        <div class="details">
+                            <h3>Support</h3>
+                            <p>Online 24/7</p>
+                        </div>
+                    </div>
+                    <!-- fact item -->
+                    <div class="fact__item padd-15">
+                        <i class='bx bxs-coffee fact__item-icon'></i>
+                        <div class="details">
+                            <h3>8421</h3>
+                            <p>Cup of coffee</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
 
         <!--=============== Services ===============-->
 

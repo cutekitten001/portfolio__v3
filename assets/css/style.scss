@@ -1,0 +1,477 @@
+/*=============== GOOGLE FONTS ===============*/
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+$header-height: 3.5rem;
+
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+$primary-color-hue: 352;
+$dark-color-lightness: 17%;
+$light-color-lightness: 92%;
+$white-color-lightness: 100%;
+
+$color-white: hsl(252, 30%, $white-color-lightness);
+$color-light: hsl(252, 30%, $light-color-lightness);
+$color-gray: hsl(252, 15%, 65%);
+$color-primary: hsl($primary-color-hue, 75%, 60%);
+$color-dark: hsl(252, 30%, $dark-color-lightness);
+
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+$body-font: 'Rubik', sans-serif;
+$h1-font-size: 2.25rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: 1.25rem;
+$normal-font-size: 1rem;
+$small-font-size: .875rem;
+
+/*========== Font weight ==========*/
+$font-medium: 400;
+$font-semi-bold: 600;
+
+/*========== Margenes Bottom ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+$m-0-5: .5rem;
+$m-0-75: .75rem;
+$m-1: 1rem;
+$m-1-5: 1.5rem;
+$m-2: 2rem;
+$m-2-5: 2.5rem;
+
+/*========== Card padding ==========*/
+$card-padding: 1.9rem 0.95rem;
+
+/*========== Border radius ==========*/
+$border-radius: 1.25rem;
+
+/*========== Box shadow ==========*/
+$box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+
+/*========== Scroll Bar ==========*/
+
+/*========== Responsive Typography ==========*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*========== Base ==========*/
+
+body,
+button,
+input,
+textarea {
+  font-family: $body-font;
+  font-size: $normal-font-size;
+}
+
+body {
+  background-color: $color-light;
+  color: $color-dark;
+  line-height: 1.7;
+  font-weight: $font-medium;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-dark;
+}
+
+h1,
+h2,
+h3 {
+  font-size: $font-semi-bold;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+/*========== Layout ==========*/
+.container {
+  max-width: 968px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*========== Reusable css classes ==========*/
+.section {
+  .container {
+    padding-top: 3.75rem;
+    padding-bottom: 4.75rem;
+  }
+}
+
+.section__title {
+  font-size: 2.25rem;
+  margin-left: $m-0-75;
+  margin-bottom: $m-2-5;
+}
+
+.padd-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*========== Buttons ==========*/
+.btn {
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  border-radius: $border-radius;
+  // margin-bottom: $m-2;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.btn__default {
+  color: #fff;
+  background-color: $color-primary;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+
+  &:hover {
+    animation-name: button-push;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes button-push {
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*========== Header ==========*/
+.header {
+  width: 100%;
+  background-color: $color-light;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/*========== NAV ==========*/
+.nav {
+  height: calc($header-height + 1.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3rem;
+
+  .nav__logo {
+    font-size: $h2-font-size;
+    font-weight: $font-semi-bold;
+    letter-spacing: 0.125rem;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 0.3rem;
+      height: 0.3rem;
+      border-radius: 50%;
+      background-color: $color-primary;
+      top: 56%;
+      right: -0.25rem;
+    }
+  }
+
+  .nav__menu {
+    margin-left: auto;
+
+    .nav__list {
+      display: flex;
+      column-gap: 3rem;
+
+      .nav__item {
+        .active-link {
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 45%;
+            width: 0.3rem;
+            height: 0.3rem;
+            background-color: $color-primary;
+            border-radius: 50%;
+          }
+        }
+      }
+
+
+
+      .nav__link {
+        font-weight: var(--font-medium);
+        transition: .3s;
+
+        &:hover {
+          color: var(--color-primary);
+
+        }
+      }
+    }
+  }
+
+  .nav__btns {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1rem;
+
+    .change__theme {
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
+
+    .nav__toggle {
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+    }
+  }
+}
+
+/*========== Home ==========*/
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+
+  .home__intro {
+    max-width: 540px;
+    text-align: center;
+
+    img {
+      margin-bottom: $m-1;
+      width: 100px;
+    }
+
+    .home__social-icons {
+      margin-top: $m-1-5;
+      margin-bottom: $m-2;
+
+      li {
+        display: inline-block;
+
+        &:not(:last-child) {
+          margin-right: $m-1-5;
+        }
+      }
+
+      a {
+        font-size: $h3-font-size;
+
+      }
+    }
+
+    .scroll__down {
+      position: absolute;
+      bottom: $m-2-5;
+      left: 0;
+      width: 100%;
+
+      .mouse__wrapper {
+        font-size: $small-font-size;
+        display: block;
+        margin: auto;
+        max-width: 100px;
+        text-align: center;
+
+        .mouse {
+          border: 2px solid $color-dark;
+          display: block;
+          height: 1.75rem;
+          width: 1.25rem;
+          margin: auto;
+          margin-top: $m-0-75;
+          border-radius: $border-radius;
+          position: relative;
+
+          .wheel {
+            background-color: $color-dark;
+            border-radius: 50%;
+            width: 0.25rem;
+            height: 0.25rem;
+            position: absolute;
+            top: $m-0-5;
+            left: 40%;
+            display: block;
+            animation: ani-mouse 2s linear infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes ani-mouse {
+  0% {
+    top: 29%
+  }
+
+  15% {
+    top: 50%
+  }
+
+  50% {
+    top: 50%
+  }
+
+  100% {
+    top: 29%
+  }
+}
+
+/*========== About ==========*/
+.about {
+  .about__img {
+    flex: 0 0 25%;
+    max-width: 25%;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .about__content {
+    flex: 0 0 75%;
+    max-width: 75%;
+
+    .about__text,
+    .skills {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .rounded {
+      background-color: $color-white;
+      padding: $card-padding;
+      border-radius: $border-radius;
+    }
+
+    .about__text {
+      p {
+        text-align: justify;
+        margin-bottom: $m-1;
+      }
+    }
+
+    .skills {
+      .skill__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        h4 {
+          margin-bottom: $m-0-75;
+        }
+
+        .progress {
+          background-color: $color-light;
+          height: .45rem;
+          border-radius: $border-radius;
+          width: 100%;
+          position: relative;
+
+          .progress__in {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            border-radius: $border-radius;
+          }
+
+          .skill__percent {
+            position: absolute;
+            right: 0;
+            top: -2.5rem;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: $m-1-5;
+        }
+      }
+    }
+  }
+
+  .fact__item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-top: $m-2-5;
+    text-align: center;
+
+    .fact__item-icon {
+      font-size: $h2-font-size;
+      color: $color-gray;
+    }
+  }
+}
+
+/*========== Services ==========*/
+
+/*========== Experience ==========*/
+
+/*========== Pricing ==========*/
+
+/*========== Portfolio ==========*/
+
+/*========== Testimonial ==========*/
+
+/*========== Blog ==========*/
+
+/*========== Contact ==========*/
+
+/*========== Footer ==========*/
+
+/*========== Customize Theme ==========*/
+
+/*========== Media Queries ==========*/
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 968px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 576px) {}
+
+@media only screen and (max-width: 320px) {}

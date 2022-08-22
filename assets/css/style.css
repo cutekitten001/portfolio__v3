@@ -1,250 +1,394 @@
-    /*=============== GOOGLE FONTS ===============*/
-    /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
-    /* font-family: 'Poppins', sans-serif; */
-    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+/*=============== GOOGLE FONTS ===============*/
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+/*=============== VARIABLES CSS ===============*/
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+/*========== Font weight ==========*/
+/*========== Margenes Bottom ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+/*========== Card padding ==========*/
+/*========== Border radius ==========*/
+/*========== Box shadow ==========*/
+/*========== Scroll Bar ==========*/
+/*========== Responsive Typography ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /*=============== VARIABLES CSS ===============*/
-    :root {
-      --header-height: 3.5rem;
-      /*56px*/
+/*========== Base ==========*/
+body,
+button,
+input,
+textarea {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+}
 
-      /*========== Colors ==========*/
-      /*Color mode HSL(hue, saturation, lightness)*/
-      --primary-color-hue: 352;
-      --dark-color-lightness: 17%;
-      --light-color-lightness: 92%;
-      --white-color-lightness: 100%;
+body {
+  background-color: hsl(252deg, 30%, 92%);
+  color: hsl(252deg, 30%, 17%);
+  line-height: 1.7;
+  font-weight: 400;
+}
 
-      --color-white: hsl(252, 30%, var(--white-color-lightness));
-      --color-light: hsl(252, 30%, var(--light-color-lightness));
-      --color-gray: hsl(252, 15%, 65%);
-      --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
-      --color-dark: hsl(252, 30%, var(--dark-color-lightness));
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 
-      /*========== Font and typography ==========*/
-      /*.5rem = 8px | 1rem = 16px ...*/
-      --body-font: 'Rubik', sans-serif;
-      --h1-font-size: 2.25rem;
-      --h2-font-size: 1.75rem;
-      --h3-font-size: 1.25rem;
-      --normal-font-size: 1rem;
-      --small-font-size: .875rem;
+ul {
+  list-style: none;
+}
 
-      /*========== Font weight ==========*/
-      --font-medium: 400;
-      --font-semi-bold: 600;
+a {
+  text-decoration: none;
+  color: hsl(252deg, 30%, 17%);
+}
 
-      /*========== Margenes Bottom ==========*/
-      /*.5rem = 8px | 1rem = 16px ...*/
-      --m-0-5: .5rem;
-      --m-0-75: .75rem;
-      --m-1: 1rem;
-      --m-1-5: 1.5rem;
-      --m-2: 2rem;
-      --m-2-5: 2.5rem;
+h1,
+h2,
+h3 {
+  font-size: 600;
+}
 
-      /*========== Card padding ==========*/
-      --card-padding: 1.9rem 0.95rem;
+h1 {
+  font-size: 2.25rem;
+}
 
-      /*========== Border radius ==========*/
-      --border-radius: 1.25rem;
+h2 {
+  font-size: 1.75rem;
+}
 
-      /*========== Box shadow ==========*/
-      --box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
-    }
+h3 {
+  font-size: 1.25rem;
+}
 
-    /*========== Scroll Bar ==========*/
+/*========== Layout ==========*/
+.container {
+  max-width: 968px;
+  margin: auto;
+}
 
-    /*========== Responsive Typography ==========*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    /*========== Base ==========*/
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/*========== Reusable css classes ==========*/
+.section .container {
+  padding-top: 3.75rem;
+  padding-bottom: 4.75rem;
+}
 
-    body,
-    button,
-    input,
-    textarea {
-      font-family: var(--body-font);
-      font-size: var(--normal-font-size);
-    }
+.section__title {
+  font-size: 2.25rem;
+  margin-left: 0.75rem;
+  margin-bottom: 2.5rem;
+}
 
-    body {
-      background-color: var(--color-light);
-      color: var(--color-dark);
-      line-height: 1.7;
-      font-weight: var(--font-medium);
-    }
+.padd-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-      vertical-align: middle;
-    }
+/*========== Buttons ==========*/
+.btn {
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  border-radius: 1.25rem;
+}
+.btn:focus {
+  outline: 0;
+}
 
-    ul {
-      list-style: none;
-    }
+.btn__default {
+  color: #fff;
+  background-color: hsl(352deg, 75%, 60%);
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+}
+.btn__default:hover {
+  -webkit-animation-name: button-push;
+          animation-name: button-push;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
 
-    a {
-      text-decoration: none;
-      color: var(--color-dark);
-    }
+@-webkit-keyframes button-push {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-    h1,
-    h2,
-    h3 {
-      font-size: var(--font-semi-bold);
-    }
+@keyframes button-push {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*========== Header ==========*/
+.header {
+  width: 100%;
+  background-color: hsl(252deg, 30%, 92%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 
-    h1 {
-      font-size: var(--h1-font-size);
-    }
+/*========== NAV ==========*/
+.nav {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+.nav .nav__logo {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+  position: relative;
+}
+.nav .nav__logo::after {
+  position: absolute;
+  content: "";
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: hsl(352deg, 75%, 60%);
+  top: 56%;
+  right: -0.25rem;
+}
+.nav .nav__menu {
+  margin-left: auto;
+}
+.nav .nav__menu .nav__list {
+  display: flex;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+.nav .nav__menu .nav__list .nav__item .active-link {
+  position: relative;
+}
+.nav .nav__menu .nav__list .nav__item .active-link::before {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 45%;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: hsl(352deg, 75%, 60%);
+  border-radius: 50%;
+}
+.nav .nav__menu .nav__list .nav__link {
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+.nav .nav__menu .nav__list .nav__link:hover {
+  color: var(--color-primary);
+}
+.nav .nav__btns {
+  display: inline-flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.nav .nav__btns .change__theme {
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+.nav .nav__btns .nav__toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
 
-    h2 {
-      font-size: var(--h2-font-size);
-    }
+/*========== Home ==========*/
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+}
+.home .home__intro {
+  max-width: 540px;
+  text-align: center;
+}
+.home .home__intro img {
+  margin-bottom: 1rem;
+  width: 100px;
+}
+.home .home__intro .home__social-icons {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+.home .home__intro .home__social-icons li {
+  display: inline-block;
+}
+.home .home__intro .home__social-icons li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.home .home__intro .home__social-icons a {
+  font-size: 1.25rem;
+}
+.home .home__intro .scroll__down {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  width: 100%;
+}
+.home .home__intro .scroll__down .mouse__wrapper {
+  font-size: 0.875rem;
+  display: block;
+  margin: auto;
+  max-width: 100px;
+  text-align: center;
+}
+.home .home__intro .scroll__down .mouse__wrapper .mouse {
+  border: 2px solid hsl(252deg, 30%, 17%);
+  display: block;
+  height: 1.75rem;
+  width: 1.25rem;
+  margin: auto;
+  margin-top: 0.75rem;
+  border-radius: 1.25rem;
+  position: relative;
+}
+.home .home__intro .scroll__down .mouse__wrapper .mouse .wheel {
+  background-color: hsl(252deg, 30%, 17%);
+  border-radius: 50%;
+  width: 0.25rem;
+  height: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 40%;
+  display: block;
+  -webkit-animation: ani-mouse 2s linear infinite;
+          animation: ani-mouse 2s linear infinite;
+}
 
-    h3 {
-      font-size: var(--h3-font-size);
-    }
+@-webkit-keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
 
-    /*========== Layout ==========*/
-    .container {
-      max-width: 968px;
-      margin-left: auto;
-      margin-right: auto;
-      overflow: hidden;
-    }
+@keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
+/*========== About ==========*/
+.about .about__img {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.about .about__img img {
+  width: 100px;
+}
+.about .about__content {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.about .about__content .about__text,
+.about .about__content .skills {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.about .about__content .rounded {
+  background-color: hsl(252deg, 30%, 100%);
+  padding: 1.9rem 0.95rem;
+  border-radius: 1.25rem;
+}
+.about .about__content .about__text p {
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+.about .about__content .skills .skill__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .about__content .skills .skill__item h4 {
+  margin-bottom: 0.75rem;
+}
+.about .about__content .skills .skill__item .progress {
+  background-color: hsl(252deg, 30%, 92%);
+  height: 0.45rem;
+  border-radius: 1.25rem;
+  width: 100%;
+  position: relative;
+}
+.about .about__content .skills .skill__item .progress .progress__in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 1.25rem;
+}
+.about .about__content .skills .skill__item .progress .skill__percent {
+  position: absolute;
+  right: 0;
+  top: -2.5rem;
+}
+.about .about__content .skills .skill__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.about .fact__item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.about .fact__item .fact__item-icon {
+  font-size: 1.75rem;
+  color: hsl(252deg, 15%, 65%);
+}
 
-    .padd-15 {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    /*========== Reusable css classes ==========*/
-
-    /*========== Buttons ==========*/
-
-    /*========== Header ==========*/
-    .header {
-      width: 100%;
-      background-color: var(--color-light);
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 100;
-    }
-
-    /*========== NAV ==========*/
-    .nav {
-      height: calc(var(--header-height) + 1.5rem);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      column-gap: 3rem;
-    }
-
-    .nav__logo {
-      font-size: var(--h2-font-size);
-      font-weight: var(--font-semi-bold);
-      letter-spacing: 0.125rem;
-      position: relative;
-    }
-
-    .nav__logo::after {
-      position: absolute;
-      content: '';
-      width: 0.3rem;
-      height: 0.3rem;
-      border-radius: 50%;
-      background-color: var(--color-primary);
-      top: 56%;
-      right: -0.25rem;
-    }
-
-    .nav__menu {
-      margin-left: auto;
-    }
-
-    .nav__list {
-      display: flex;
-      column-gap: 3rem;
-    }
-
-    .nav__link {
-      font-weight: var(--font-medium);
-      transition: .3s;
-    }
-
-    .nav__link:hover {
-      color: var(--color-primary);
-    }
-
-    .nav__btns {
-      display: inline-flex;
-      align-items: center;
-      column-gap: 1rem;
-    }
-
-    .change__theme {
-      font-size: 1.15rem;
-      cursor: pointer;
-    }
-
-    .nav__toggle {
-      font-size: 1.2rem;
-      cursor: pointer;
-      display: none;
-    }
-
-    .active-link {
-      position: relative;
-    }
-
-    .active-link::before {
-      content: '';
-      position: absolute;
-      bottom: -0.75rem;
-      left: 45%;
-      width: 0.3rem;
-      height: 0.3rem;
-      background-color: var(--color-primary);
-      border-radius: 50%;
-    }
-
-    /*========== Home ==========*/
-
-    /*========== About ==========*/
-
-    /*========== Services ==========*/
-
-    /*========== Experience ==========*/
-
-    /*========== Pricing ==========*/
-
-    /*========== Portfolio ==========*/
-
-    /*========== Testimonial ==========*/
-
-    /*========== Blog ==========*/
-
-    /*========== Contact ==========*/
-
-    /*========== Footer ==========*/
-
-    /*========== Customize Theme ==========*/
-
-    /*========== Media Queries ==========*/
-    @media only screen and (max-width:1200px) {}
-
-    @media only screen and (max-width:968px) {}
-
-    @media only screen and (max-width:768px) {}
-
-    @media only screen and (max-width:576px) {}
-
-    @media only screen and (max-width:320px) {}
+/*========== Services ==========*/
+/*========== Experience ==========*/
+/*========== Pricing ==========*/
+/*========== Portfolio ==========*/
+/*========== Testimonial ==========*/
+/*========== Blog ==========*/
+/*========== Contact ==========*/
+/*========== Footer ==========*/
+/*========== Customize Theme ==========*/
+/*========== Media Queries ==========*//*# sourceMappingURL=style.css.map */
